@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# sol1
+
+# In[2]:
 
 
 class Solution(object):
@@ -27,6 +29,28 @@ class Solution(object):
                 nums.remove('dup')
         return(len(nums))
 nums = []
+answer = Solution()
+leng = answer.removeDuplicates(nums)
+print(nums)
+for i in range(0,leng):
+    print(nums[i])
+
+
+# sol2
+
+# In[6]:
+
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """    
+        nums[:] = sorted(set(nums))
+        return(len(nums))
+    
+nums = [1,2,3,3]
 answer = Solution()
 leng = answer.removeDuplicates(nums)
 print(nums)
